@@ -10,6 +10,7 @@ This repository contains three configuration files:
 
 1. It works fine on 64bit Lubuntu with VIM 7.4.
 1. It should be OK for other Linux and VIM 7.+.
+1. Cmake is needed, apt-get install cmake
 
 ### Install & Upgrade
 

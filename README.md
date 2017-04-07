@@ -58,6 +58,14 @@ This repository contains three configuration files:
 1. Open `gvim`, execute `:BundleClean`
 1. Open `gvim`, execute `:BundleUpdate`
 
+### Issue
+
+1. Open vim without color
+
+```bash
+    cd ~/.vimrc
+    add line **syntax on**
+```
 
 ### Plugins
 

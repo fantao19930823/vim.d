@@ -22,11 +22,11 @@ This repository contains three configuration files:
 
 1. Clone `vim.d`
 
-        git clone https://github.com/feiyuw/vim.d.git ~/Workspace/vim.d
+        git clone https://github.com/feiyuw/vim.d.git ~/workspace/vim.d
 
 1. Create `~/.vimrc`
 
-        ln -s ~/Workspace/vim.d/vimrc ~/.vimrc
+        ln -s ~/workspace/vim.d/vimrc ~/.vimrc
 
 1. Open `gvim`, execute `:BundleInstall`
 1. Patch `power-line` font

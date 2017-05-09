@@ -63,8 +63,8 @@ This repository contains three configuration files:
 1. Open vim without color
 
 ```bash
-    cd ~/.vimrc
-    add line **syntax on**
+    vim ~/.vimrc
+    add line syntax on
 ```
 
 ### Plugins

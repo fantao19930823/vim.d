@@ -67,6 +67,10 @@ This repository contains three configuration files:
     add line syntax on
 ```
 
+### Update colorscheme
+1. Cp your intersted colorscheme file such as [monokai.vim](https://github.com/sickill/vim-monokai/blob/master/colors/monokai.vim) under ~/.vim/bundle/vim-colors-solarized/colors
+2. Set `colorscheme monokai` in your ~/vimrc file
+
 ### Plugins
 
 The plugins I used are:

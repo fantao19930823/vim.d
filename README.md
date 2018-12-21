@@ -28,7 +28,7 @@ This repository contains three configuration files:
 
         ln -s ~/workspace/vim.d/vimrc ~/.vimrc
 
-1. Open `gvim`, execute `:BundleInstall`
+1. Open `vim`, execute `:BundleInstall`
 1. Patch `power-line` font
 
     ```sh
@@ -43,7 +43,7 @@ This repository contains three configuration files:
     cd ~/.vim/bundle/YouCompleteMe
     ./install.sh
     ```
-1. Open `gvim` again, enjoy!
+1. Open `vim` again, enjoy!
 
 
 #### Upgrade
@@ -55,8 +55,8 @@ This repository contains three configuration files:
     git pull
 ```
 
-1. Open `gvim`, execute `:BundleClean`
-1. Open `gvim`, execute `:BundleUpdate`
+1. Open `vim`, execute `:BundleClean`
+1. Open `vim`, execute `:BundleUpdate`
 
 ### Issue
 

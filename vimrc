@@ -1,3 +1,4 @@
+let g:go_version_warning = 0
 let g:mapleader=","
 let g:rootmarkers = ['.git', '.svn']
 

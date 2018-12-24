@@ -222,4 +222,4 @@ The plugins I used are:
 
 ## Tmux
 
-See in [tmux](https://github.com/tafanfly/vim.d/blob/master/tmux.md), [config](https://github.com/tafanfly/vim.d/blob/master/.tmux.conf)
+See in [tmux.readme](https://github.com/tafanfly/vim.d/blob/master/tmux.md), [tmux.config](https://github.com/tafanfly/vim.d/blob/master/.tmux.conf)

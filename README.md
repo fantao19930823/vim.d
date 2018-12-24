@@ -21,7 +21,7 @@ This repository contains three configuration files:
 
 1. Clone `vim.d`
 
-        git clone https://github.com/feiyuw/vim.d.git ~/workspace/vim.d
+        git clone https://github.com/tafanfly/vim.d.git ~/workspace/vim.d
 
 1. Create `~/.vimrc`
 
@@ -198,6 +198,29 @@ The plugins I used are:
 1. `c0` modify from start to current position
 1. `c$` modify from current position to end of this line
 1. `R` update the content until got `ESC`
+
+### 总结常用的command
+  vim命令 |  描述 | 
+  ---- |----|
+  ,e    | 打开一个文件 |
+  Tab  | 普通模式下切换文件 |
+  ,m  | 注释一行/解注释 |
+  F12  | 浏览/关闭项目目录|
+  Ctrl + v  | 普通模式下选择列|
+  Shift + v  | 普通模式下选择行|
+  Ctrl + v/Shift + y  + p | 普通模式下选择,然后copy,再paste|
+  u  | 撤销上一步|
+  c0  | 修改行开头到当前位置|
+  c$  | 修改当前位置到行未|
+  0  | 跳到行头|
+  $  | 跳到行末|
+  ^  | 跳到该行第一个字符|
+  b  | 跳到前一个word|
+  w  | 跳到后一个word|
+  gg  | 跳到文件开头|
+  G  | 跳到文件末尾|
+  {  | 跳到上一个block|
+  }  | 跳到下一个block|
 
 ### Macro
 

@@ -222,27 +222,4 @@ The plugins I used are:
 
 ## Tmux
 
-### Install
-
-1. Make sure your tmux version is 1.9+, I use tmux 2.0. To install latest tmux version, you may refer to the following steps (tested on linux mint 17.3 which is based on ubuntu 14.04).
-
-```sh
-sudo apt-get install -y python-software-properties software-properties-common
-sudo add-apt-repository -y ppa:pi-rho/dev
-sudo apt-get update
-sudo apt-get install -y tmux
-```
-1. Install [tpm](https://github.com/tmux-plugins/tpm) which is the package manager of tmux.
-1. In tmux session, execute `Ctrl+B I` to install plugins
-
-### Quick Edit
-
-1. `tmux new -s demo`, create a demo session
-1. `tmux ls`, list the all tmux sessions
-1. `tmux a -t demo`, attach the demo session
-
-### Reference
-
-1. [upgrade tmux from 1.8 to 2.0 on ubuntu 14.04](http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04)
-1. [dayid's tmux & screen cheat-sheet](http://www.dayid.org/comp/tm.html)
-1. [效率为王：终端管理工具 Tmux](https://gitbook.cn/books/5a362ddc2edf834ef46b6415/index.html)
+See in [tmux](https://github.com/tafanfly/vim.d/blob/master/tmux.md)

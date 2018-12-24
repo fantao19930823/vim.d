@@ -68,7 +68,7 @@ This repository contains three configuration files:
 ```
 
 ### Update colorscheme
-1. Cp your intersted colorscheme file such as [monokai.vim](https://github.com/sickill/vim-monokai/blob/master/colors/monokai.vim) under ~/.vim/bundle/vim-colors-solarized/colors
+1. Copy intersted colorscheme file such as [monokai.vim](https://github.com/sickill/vim-monokai/blob/master/colors/monokai.vim) under ~/.vim/bundle/vim-colors-solarized/colors
 2. Set `colorscheme monokai` in your ~/vimrc file
 
 ### Plugins
@@ -220,9 +220,9 @@ The plugins I used are:
 1. [ctrlp.vim introduction](http://zuyunfei.com/2013/08/26/vim-plugin-ctrlp/)
 1. [Practical VIM](http://www.amazon.com/Practical-Vim-Thought-Pragmatic-Programmers/dp/1934356980/ref=sr_1_1?ie=UTF8&qid=1407823913&sr=8-1&keywords=practical+vim)
 
-# Tmux
+## Tmux
 
-## Install
+### Install
 
 1. Make sure your tmux version is 1.9+, I use tmux 2.0. To install latest tmux version, you may refer to the following steps (tested on linux mint 17.3 which is based on ubuntu 14.04).
 
@@ -230,12 +230,24 @@ The plugins I used are:
 sudo apt-get install -y python-software-properties software-properties-common
 sudo add-apt-repository -y ppa:pi-rho/dev
 sudo apt-get update
-sudo apt-get install -y tmux=2.0-1~ppa1~t
+sudo apt-get install -y tmux
 ```
 1. Install [tpm](https://github.com/tmux-plugins/tpm) which is the package manager of tmux.
 1. In tmux session, execute `Ctrl+B I` to install plugins
 
-## Reference
+### Quick Edit
+
+1. `tmux new -s demo`, create a demo session
+1. `tmux ls`, list the all tmux sessions
+1. `di'` delete content in `'`
+1. `dt'` delete content from current position to `'`
+1. `cw` modify the current word
+1. `caw` modify the current word
+1. `c0` modify from start to current position
+1. `c$` modify from current position to end of this line
+1. `R` update the content until got `ESC`
+
+### Reference
 
 1. [upgrade tmux from 1.8 to 2.0 on ubuntu 14.04](http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04)
 1. [dayid's tmux & screen cheat-sheet](http://www.dayid.org/comp/tm.html)

@@ -127,7 +127,7 @@ Bundle 'christoomey/vim-tmux-navigator'
 filetype plugin indent on
 
 set number
-set relativenumber
+"set relativenumber
 set ruler
 set cursorline
 "set cursorcolumn

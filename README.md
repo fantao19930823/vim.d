@@ -1,7 +1,6 @@
 This repository contains three configuration files:
 
 * vimrc
-* zshrc
 * tmux.conf
 
 ---

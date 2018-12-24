@@ -239,15 +239,10 @@ sudo apt-get install -y tmux
 
 1. `tmux new -s demo`, create a demo session
 1. `tmux ls`, list the all tmux sessions
-1. `di'` delete content in `'`
-1. `dt'` delete content from current position to `'`
-1. `cw` modify the current word
-1. `caw` modify the current word
-1. `c0` modify from start to current position
-1. `c$` modify from current position to end of this line
-1. `R` update the content until got `ESC`
+1. `tmux a -t demo`, attach the demo session
 
 ### Reference
 
 1. [upgrade tmux from 1.8 to 2.0 on ubuntu 14.04](http://stackoverflow.com/questions/25940944/ugrade-tmux-from-1-8-to-1-9-on-ubuntu-14-04)
 1. [dayid's tmux & screen cheat-sheet](http://www.dayid.org/comp/tm.html)
+1. [效率为王：终端管理工具 Tmux](https://gitbook.cn/books/5a362ddc2edf834ef46b6415/index.html)

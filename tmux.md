@@ -18,14 +18,18 @@ set -g prefix ^a
 ```
 直接用`source ~/.tmux.conf`使其生效是有问题的，stackoverflow上有[解决方案](https://stackoverflow.com/questions/17041647/unable-to-source-tmux-conf)。
 如下：
->随便打开一个session， tmux new -s demo
+```
+随便打开一个session， tmux new -s demo
 输入命令  ctrl -a + :，就是同时摁着ctrl 和a键， 然后放开再摁：键
 然后输入命令source-file ~/.tmux.conf
+```
 
 ##### 快速配置文件
 上面的修改太麻烦了，可以安装下面的命令快速配置
->bind e new-window -n ".tmux.conf" "sudo vim ~/.tmux.conf"  # 快速打开配置文件
+```
+bind e new-window -n ".tmux.conf" "sudo vim ~/.tmux.conf"  # 快速打开配置文件
 bind-key r source-file ~/.tmux.conf\; display-message "Config reloaded" # 配置文件生效
+```
 
 `prefix + e`的组合可以让你迅速的打开`~/.tmux.conf` 并进行配置修改，配置完成之后使用 `prefix + r`的方式重新加载。
 ##### 更新窗口序号
@@ -72,7 +76,8 @@ set -g default-terminal "screen-256color"
 
 ### Command
 * 注意以下命令是在配置后的，非tmux默认命令，**prefix指的就是ctrl -a**。
-  命令 |  描述 |
+
+  vim命令 |  描述 | 
   ---- |----|
   tmux new -s demo    | 新建一个名为demo的session |
   tmux ls    | 查看当前终端下的所有session |

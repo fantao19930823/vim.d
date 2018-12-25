@@ -1,52 +1,52 @@
 ## Tmux
-Tmux½éÉÜ°üº¬¼¸²¿·Ö
+Tmuxä»‹ç»åŒ…å«å‡ éƒ¨åˆ†
 * install
 * config
 * command
 ---
 ### Install
-Ö±½ÓÓÃaptÃüÁî°²×°£¬ µ±È»²»Í¬µÄlinux »·¾³ÏÂ»áÓĞ²»Í¬µÄ°²×°ÃüÁî¡£
+ç›´æ¥ç”¨aptå‘½ä»¤å®‰è£…ï¼Œ å½“ç„¶ä¸åŒçš„linux ç¯å¢ƒä¸‹ä¼šæœ‰ä¸åŒçš„å®‰è£…å‘½ä»¤ã€‚
 > sudo apt-get install tmux
 ### Config
-tmux µÄÄ¬ÈÏÅäÖÃÎÄ¼şÊÇ`~/.tmux.conf`
-##### tmux ¿ì½İ¼üÇ°×º
-tmux µÄÄ¬ÈÏ¿ì½İ¼üÇ°×ºÊÇ`ctrl -b`£¬²»Ì«·ûºÏ³ÌĞòÔ±µÄ°´¼üÊäÈë£¬ËùÒÔĞèÒª¸ù¾İ×Ô¼ºµÄĞèÇóĞŞ¸Ä£¬ ÎÒµÄÊÇÅäÖÃÁË`ctrl -a`(ÎÄÕÂºóÃæµÄ**prefixÖ¸µÄ¾ÍÊÇctrl -a**)¡£
-ÔÚ`~/.tmux.conf`¼ÓÈëÏÂÁĞÄÚÈİ£º
+tmux çš„é»˜è®¤é…ç½®æ–‡ä»¶æ˜¯`~/.tmux.conf`
+##### tmux å¿«æ·é”®å‰ç¼€
+tmux çš„é»˜è®¤å¿«æ·é”®å‰ç¼€æ˜¯`ctrl -b`ï¼Œä¸å¤ªç¬¦åˆç¨‹åºå‘˜çš„æŒ‰é”®è¾“å…¥ï¼Œæ‰€ä»¥éœ€è¦æ ¹æ®è‡ªå·±çš„éœ€æ±‚ä¿®æ”¹ï¼Œ æˆ‘çš„æ˜¯é…ç½®äº†`ctrl -a`(æ–‡ç« åé¢çš„**prefixæŒ‡çš„å°±æ˜¯ctrl -a**)ã€‚
+åœ¨`~/.tmux.conf`åŠ å…¥ä¸‹åˆ—å†…å®¹ï¼š
 ```
 unbind ^b 
 set -g prefix ^a
 ```
-Ö±½ÓÓÃ`source ~/.tmux.conf`Ê¹ÆäÉúĞ§ÊÇÓĞÎÊÌâµÄ£¬stackoverflowÉÏÓĞ[½â¾ö·½°¸](https://stackoverflow.com/questions/17041647/unable-to-source-tmux-conf)¡£
-ÈçÏÂ£º
->Ëæ±ã´ò¿ªÒ»¸ösession£¬ tmux new -s demo
-ÊäÈëÃüÁî  ctrl -a + :£¬¾ÍÊÇÍ¬Ê±Şô×Åctrl ºÍa¼ü£¬ È»ºó·Å¿ªÔÙŞô£º¼ü
-È»ºóÊäÈëÃüÁîsource-file ~/.tmux.conf
+ç›´æ¥ç”¨`source ~/.tmux.conf`ä½¿å…¶ç”Ÿæ•ˆæ˜¯æœ‰é—®é¢˜çš„ï¼Œstackoverflowä¸Šæœ‰[è§£å†³æ–¹æ¡ˆ](https://stackoverflow.com/questions/17041647/unable-to-source-tmux-conf)ã€‚
+å¦‚ä¸‹ï¼š
+>éšä¾¿æ‰“å¼€ä¸€ä¸ªsessionï¼Œ tmux new -s demo
+è¾“å…¥å‘½ä»¤  ctrl -a + :ï¼Œå°±æ˜¯åŒæ—¶æ‘ç€ctrl å’Œaé”®ï¼Œ ç„¶åæ”¾å¼€å†æ‘ï¼šé”®
+ç„¶åè¾“å…¥å‘½ä»¤source-file ~/.tmux.conf
 
-##### ¿ìËÙÅäÖÃÎÄ¼ş
-ÉÏÃæµÄĞŞ¸ÄÌ«Âé·³ÁË£¬¿ÉÒÔ°²×°ÏÂÃæµÄÃüÁî¿ìËÙÅäÖÃ
->bind e new-window -n ".tmux.conf" "sudo vim ~/.tmux.conf"  # ¿ìËÙ´ò¿ªÅäÖÃÎÄ¼ş
-bind-key r source-file ~/.tmux.conf\; display-message "Config reloaded" # ÅäÖÃÎÄ¼şÉúĞ§
+##### å¿«é€Ÿé…ç½®æ–‡ä»¶
+ä¸Šé¢çš„ä¿®æ”¹å¤ªéº»çƒ¦äº†ï¼Œå¯ä»¥å®‰è£…ä¸‹é¢çš„å‘½ä»¤å¿«é€Ÿé…ç½®
+>bind e new-window -n ".tmux.conf" "sudo vim ~/.tmux.conf"  # å¿«é€Ÿæ‰“å¼€é…ç½®æ–‡ä»¶
+bind-key r source-file ~/.tmux.conf\; display-message "Config reloaded" # é…ç½®æ–‡ä»¶ç”Ÿæ•ˆ
 
-`prefix + e`µÄ×éºÏ¿ÉÒÔÈÃÄãÑ¸ËÙµÄ´ò¿ª`~/.tmux.conf` ²¢½øĞĞÅäÖÃĞŞ¸Ä£¬ÅäÖÃÍê³ÉÖ®ºóÊ¹ÓÃ `prefix + r`µÄ·½Ê½ÖØĞÂ¼ÓÔØ¡£
-##### ¸üĞÂ´°¿ÚĞòºÅ
-´ò¿ªsession´°¿ÚÊÇÄ¬ÈÏ´Ó0¿ªÊ¼µÄ£¬¿ÉÒÔÅäÖÃ´Ó1¿ªÊ¼¡£
+`prefix + e`çš„ç»„åˆå¯ä»¥è®©ä½ è¿…é€Ÿçš„æ‰“å¼€`~/.tmux.conf` å¹¶è¿›è¡Œé…ç½®ä¿®æ”¹ï¼Œé…ç½®å®Œæˆä¹‹åä½¿ç”¨ `prefix + r`çš„æ–¹å¼é‡æ–°åŠ è½½ã€‚
+##### æ›´æ–°çª—å£åºå·
+æ‰“å¼€sessionçª—å£æ˜¯é»˜è®¤ä»0å¼€å§‹çš„ï¼Œå¯ä»¥é…ç½®ä»1å¼€å§‹ã€‚
 ```
 set -g base-index 1         
 set -g pane-base-index 1 
 ```
 
-##### ¸üĞÂ·Ö¸îÃæ°åµÄ¿ì½İ¼ü
-tmux ´¹Ö±ºÍË®Æ½·Ö¸îÃæ°åµÄ¿ì½İ¼ü·Ö±ğÎª`prefix + %`ºÍ`prefix + "`¡£ÕâÁ½¸ö°´¼ü±È½ÏÄÑ¼ÇÒä£¬ÎÒÃÇ¿ÉÒÔ½«Æä¸ü¸ÄÎª`prefix + |`ºÍ`prefix + -`¡£½«ÒÔÏÂÅäÖÃ¼ÓÈë `~/.tmux.conf`¡£
+##### æ›´æ–°åˆ†å‰²é¢æ¿çš„å¿«æ·é”®
+tmux å‚ç›´å’Œæ°´å¹³åˆ†å‰²é¢æ¿çš„å¿«æ·é”®åˆ†åˆ«ä¸º`prefix + %`å’Œ`prefix + "`ã€‚è¿™ä¸¤ä¸ªæŒ‰é”®æ¯”è¾ƒéš¾è®°å¿†ï¼Œæˆ‘ä»¬å¯ä»¥å°†å…¶æ›´æ”¹ä¸º`prefix + |`å’Œ`prefix + -`ã€‚å°†ä»¥ä¸‹é…ç½®åŠ å…¥ `~/.tmux.conf`ã€‚
 ```
 bind-key | split-window -h 
 bind-key - split-window
 ```
-##### Êó±êÄ£Ê½
-Êó±êÄ£Ê½ÓĞÊ±ºòÒ²¿ÉÄÜ·Ç³£ÓĞÓÃ£¬±ÈÈçÄã¿ÉÄÜÏëÓÃÊó±êÀ´Ñ¡ÖĞÒ»¸öÃæ°å»òÕß´°¿Ú£¬ÓÃÊó±êµ÷ÕûÃæ°å´óĞ¡£¬»òÕßÓÃÊó±ê¹öÂÖÀ´ÏòÉÏ¹ö¶¯ä¯ÀÀÀúÊ·¡£½«ÒÔÏÂÅäÖÃ¼ÓÈë `~/.tmux.conf`¡£`prefix + m` À´´¥·¢Êó±êÄ£Ê½µÄ¿ªºÍ¹Ø¡£
+##### é¼ æ ‡æ¨¡å¼
+é¼ æ ‡æ¨¡å¼æœ‰æ—¶å€™ä¹Ÿå¯èƒ½éå¸¸æœ‰ç”¨ï¼Œæ¯”å¦‚ä½ å¯èƒ½æƒ³ç”¨é¼ æ ‡æ¥é€‰ä¸­ä¸€ä¸ªé¢æ¿æˆ–è€…çª—å£ï¼Œç”¨é¼ æ ‡è°ƒæ•´é¢æ¿å¤§å°ï¼Œæˆ–è€…ç”¨é¼ æ ‡æ»šè½®æ¥å‘ä¸Šæ»šåŠ¨æµè§ˆå†å²ã€‚å°†ä»¥ä¸‹é…ç½®åŠ å…¥ `~/.tmux.conf`ã€‚`prefix + m` æ¥è§¦å‘é¼ æ ‡æ¨¡å¼çš„å¼€å’Œå…³ã€‚
 ```
 bind m run 'old=$(tmux show -gv mouse);new=""; if [ "$old" = "on" ]; then new="off"; else new="on"; fi; tmux set -g mouse $new; tmux display "mouse: $new"'
 ```
-##### ËùÓĞÅäÖÃÈçÏÂ
+##### æ‰€æœ‰é…ç½®å¦‚ä¸‹
 ```
 unbind ^b
 set -g prefix ^a
@@ -71,31 +71,31 @@ set -g default-terminal "screen-256color"
 ```
 
 ### Command
-* ×¢ÒâÒÔÏÂÃüÁîÊÇÔÚÅäÖÃºóµÄ£¬·ÇtmuxÄ¬ÈÏÃüÁî£¬**prefixÖ¸µÄ¾ÍÊÇctrl -a**¡£
-  ÃüÁî |  ÃèÊö | 
+* æ³¨æ„ä»¥ä¸‹å‘½ä»¤æ˜¯åœ¨é…ç½®åçš„ï¼Œétmuxé»˜è®¤å‘½ä»¤ï¼Œ**prefixæŒ‡çš„å°±æ˜¯ctrl -a**ã€‚
+  å‘½ä»¤ |  æè¿° |
   ---- |----|
-  tmux new -s demo    | ĞÂ½¨Ò»¸öÃûÎªdemoµÄsession |
-  tmux ls    | ²é¿´µ±Ç°ÖÕ¶ËÏÂµÄËùÓĞsession |
-  tmux a -t demo  | Á¬½ÓÉÏdemoÕâ¸ösession |
-  prefix + s  | Ñ¡Ôñ²¢¿ìËÙÇĞ»»session |
-  prefix + $  | ÎªsessionÖØÃüÃû |
-  prefix + n/w  | ¿ìËÙÇĞ»»´°¿Ú|
-  prefix + 1/2/3  | ÇĞ»»µ½Ö¸¶¨´°¿Ú1/2/3 |
-  prefix + £¬  | Îª´°¿ÚÖØÃüÃû |
-  exit   | ÍË³ö´°¿Ú |
-  prefix + x/&  | Ç¿ÖÆÍË³ö¸Ã´°¿Ú |
-  prefix + e  | ¿ìËÙ´ò¿ªÅäÖÃÎÄ¼şconfig |
-  prefix + r  | ÅäÖÃÎÄ¼şconfig¿ìËÙÉúĞ§ |
-  prefix + \|  | ´¹Ö±ÇĞ¸î´°¿Ú |
-  prefix + -  | ºáÏòÇĞ¸î´°¿Ú |
-  prefix + ctrl + ·½Ïò¼ü | µ÷Õû´°¿Ú´óĞ¡ |
-  prefix + o/·½Ïò¼ü  | ÇĞ»»ÒÑ·Ö¸îµÄ´°¿Ú |
-  prefix + z  | È«ÆÁ¸ÃÒÑ·Ö¸îµÄÃæ°å£¬ÒÔ¼°»Ö¸´Ô­×´ |
+  tmux new -s demo    | æ–°å»ºä¸€ä¸ªåä¸ºdemoçš„session |
+  tmux ls    | æŸ¥çœ‹å½“å‰ç»ˆç«¯ä¸‹çš„æ‰€æœ‰session |
+  tmux a -t demo  | è¿æ¥ä¸Šdemoè¿™ä¸ªsession |
+  prefix + s  | é€‰æ‹©å¹¶å¿«é€Ÿåˆ‡æ¢session |
+  prefix + $  | ä¸ºsessioné‡å‘½å |
+  prefix + n/w  | å¿«é€Ÿåˆ‡æ¢çª—å£|
+  prefix + 1/2/3  | åˆ‡æ¢åˆ°æŒ‡å®šçª—å£1/2/3 |
+  prefix + ï¼Œ  | ä¸ºçª—å£é‡å‘½å |
+  exit   | é€€å‡ºçª—å£ |
+  prefix + x/&  | å¼ºåˆ¶é€€å‡ºè¯¥çª—å£ |
+  prefix + e  | å¿«é€Ÿæ‰“å¼€é…ç½®æ–‡ä»¶config |
+  prefix + r  | é…ç½®æ–‡ä»¶configå¿«é€Ÿç”Ÿæ•ˆ |
+  prefix + \|  | å‚ç›´åˆ‡å‰²çª—å£ |
+  prefix + -   | æ¨ªå‘åˆ‡å‰²çª—å£ |
+  prefix + ctrl + æ–¹å‘é”® | è°ƒæ•´çª—å£å¤§å° |
+  prefix + o/æ–¹å‘é”®  | åˆ‡æ¢å·²åˆ†å‰²çš„çª—å£ |
+  prefix + z  | å…¨å±è¯¥å·²åˆ†å‰²çš„é¢æ¿ï¼Œä»¥åŠæ¢å¤åŸçŠ¶ |
 
-### Ğ§¹ûÍ¼
+### æ•ˆæœå›¾
 ![image.png](https://upload-images.jianshu.io/upload_images/5605276-7a7b2f344d4e5534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
  
 ### Refenence
-[Ğ§ÂÊÎªÍõ£ºÖÕ¶Ë¹ÜÀí¹¤¾ß Tmux](https://gitbook.cn/books/5a362ddc2edf834ef46b6415/index.html)
-[tmux.conf ÎÄ¼ş](https://github.com/tafanfly/vim.d/blob/master/tmux.conf)
+[æ•ˆç‡ä¸ºç‹ï¼šç»ˆç«¯ç®¡ç†å·¥å…· Tmux](https://gitbook.cn/books/5a362ddc2edf834ef46b6415/index.html)
+[tmux.conf æ–‡ä»¶](https://github.com/tafanfly/vim.d/blob/master/tmux.conf)

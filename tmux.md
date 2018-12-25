@@ -77,7 +77,7 @@ set -g default-terminal "screen-256color"
 ### Command
 * 注意以下命令是在配置后的，非tmux默认命令，**prefix指的就是ctrl -a**。
 
-  vim命令 |  描述 | 
+  tmux命令 |  描述 | 
   ---- |----|
   tmux new -s demo    | 新建一个名为demo的session |
   tmux ls    | 查看当前终端下的所有session |

@@ -57,6 +57,10 @@ This repository contains three configuration files:
 1. Open `vim`, execute `:BundleClean`
 1. Open `vim`, execute `:BundleUpdate`
 
+### Update colorscheme
+1. Copy intersted colorscheme file such as [monokai.vim](https://github.com/sickill/vim-monokai/blob/master/colors/monokai.vim) under ~/.vim/bundle/vim-colors-solarized/colors
+2. Set `colorscheme monokai` in your ~/vimrc file
+
 ### Issue
 
 1. Open vim without color
@@ -65,10 +69,6 @@ This repository contains three configuration files:
     vim ~/.vimrc
     add line syntax on
 ```
-
-### Update colorscheme
-1. Copy intersted colorscheme file such as [monokai.vim](https://github.com/sickill/vim-monokai/blob/master/colors/monokai.vim) under ~/.vim/bundle/vim-colors-solarized/colors
-2. Set `colorscheme monokai` in your ~/vimrc file
 
 ### Plugins
 
